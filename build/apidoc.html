@@ -1,0 +1,2182 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/vanng822/pagination"
+
+    >pagination (v0.4.4)</a>
+</h1>
+<h4>Pagination for javascript/nodejs</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination">module pagination</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.ItemPaginator">
+            function <span class="apidocSignatureSpan">pagination.</span>ItemPaginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.Paginator">
+            function <span class="apidocSignatureSpan">pagination.</span>Paginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.SearchPaginator">
+            function <span class="apidocSignatureSpan">pagination.</span>SearchPaginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.TemplatePaginator">
+            function <span class="apidocSignatureSpan">pagination.</span>TemplatePaginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.create">
+            function <span class="apidocSignatureSpan">pagination.</span>create
+            <span class="apidocSignatureSpan">(type, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.registerFactory">
+            function <span class="apidocSignatureSpan">pagination.</span>registerFactory
+            <span class="apidocSignatureSpan">(type, factory)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.</span>ItemPaginator.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.</span>Paginator.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.</span>SearchPaginator.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.</span>TemplateEngine</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.</span>TemplatePaginator.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.</span>index</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.</span>item_paginator</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.</span>search_paginator</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.</span>template</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.</span>template_paginator</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.</span>translationKeys</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.ItemPaginator">module pagination.ItemPaginator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.ItemPaginator.ItemPaginator">
+            function <span class="apidocSignatureSpan">pagination.</span>ItemPaginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.ItemPaginator.super_">
+            function <span class="apidocSignatureSpan">pagination.ItemPaginator.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.ItemPaginator.prototype">module pagination.ItemPaginator.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.ItemPaginator.prototype.render">
+            function <span class="apidocSignatureSpan">pagination.ItemPaginator.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.ItemPaginator.prototype.renderCurrentPageReport">
+            function <span class="apidocSignatureSpan">pagination.ItemPaginator.prototype.</span>renderCurrentPageReport
+            <span class="apidocSignatureSpan">(fromResult, toResult, totalResult)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.Paginator">module pagination.Paginator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.Paginator.Paginator">
+            function <span class="apidocSignatureSpan">pagination.</span>Paginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.Paginator.prototype">module pagination.Paginator.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.Paginator.prototype.calc">
+            function <span class="apidocSignatureSpan">pagination.Paginator.prototype.</span>calc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.Paginator.prototype.getPaginationData">
+            function <span class="apidocSignatureSpan">pagination.Paginator.prototype.</span>getPaginationData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.Paginator.prototype.preparePreLink">
+            function <span class="apidocSignatureSpan">pagination.Paginator.prototype.</span>preparePreLink
+            <span class="apidocSignatureSpan">(prelink)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.Paginator.prototype.render">
+            function <span class="apidocSignatureSpan">pagination.Paginator.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.Paginator.prototype.set">
+            function <span class="apidocSignatureSpan">pagination.Paginator.prototype.</span>set
+            <span class="apidocSignatureSpan">(option, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.SearchPaginator">module pagination.SearchPaginator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.SearchPaginator.SearchPaginator">
+            function <span class="apidocSignatureSpan">pagination.</span>SearchPaginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.SearchPaginator.super_">
+            function <span class="apidocSignatureSpan">pagination.SearchPaginator.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.SearchPaginator.prototype">module pagination.SearchPaginator.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.SearchPaginator.prototype.render">
+            function <span class="apidocSignatureSpan">pagination.SearchPaginator.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.TemplateEngine">module pagination.TemplateEngine</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.TemplateEngine.compile">
+            function <span class="apidocSignatureSpan">pagination.TemplateEngine.</span>compile
+            <span class="apidocSignatureSpan">(str, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.TemplateEngine.parse">
+            function <span class="apidocSignatureSpan">pagination.TemplateEngine.</span>parse
+            <span class="apidocSignatureSpan">(str, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.TemplatePaginator">module pagination.TemplatePaginator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.TemplatePaginator.TemplatePaginator">
+            function <span class="apidocSignatureSpan">pagination.</span>TemplatePaginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.TemplatePaginator.super_">
+            function <span class="apidocSignatureSpan">pagination.TemplatePaginator.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.TemplatePaginator.prototype">module pagination.TemplatePaginator.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.TemplatePaginator.prototype.render">
+            function <span class="apidocSignatureSpan">pagination.TemplatePaginator.prototype.</span>render
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.index">module pagination.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.index.ItemPaginator">
+            function <span class="apidocSignatureSpan">pagination.index.</span>ItemPaginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.index.Paginator">
+            function <span class="apidocSignatureSpan">pagination.index.</span>Paginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.index.SearchPaginator">
+            function <span class="apidocSignatureSpan">pagination.index.</span>SearchPaginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.index.TemplatePaginator">
+            function <span class="apidocSignatureSpan">pagination.index.</span>TemplatePaginator
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.index.create">
+            function <span class="apidocSignatureSpan">pagination.index.</span>create
+            <span class="apidocSignatureSpan">(type, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.index.registerFactory">
+            function <span class="apidocSignatureSpan">pagination.index.</span>registerFactory
+            <span class="apidocSignatureSpan">(type, factory)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.index.</span>TemplateEngine</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pagination.index.</span>translationKeys</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.item_paginator">module pagination.item_paginator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.item_paginator.module">
+            function <span class="apidocSignatureSpan">pagination.item_paginator.</span>module
+            <span class="apidocSignatureSpan">(pagination, util)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.search_paginator">module pagination.search_paginator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.search_paginator.module">
+            function <span class="apidocSignatureSpan">pagination.search_paginator.</span>module
+            <span class="apidocSignatureSpan">(pagination, util)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.template">module pagination.template</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.template.module">
+            function <span class="apidocSignatureSpan">pagination.template.</span>module
+            <span class="apidocSignatureSpan">(pagination, util)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pagination.template_paginator">module pagination.template_paginator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pagination.template_paginator.module">
+            function <span class="apidocSignatureSpan">pagination.template_paginator.</span>module
+            <span class="apidocSignatureSpan">(pagination, util)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination" id="apidoc.module.pagination">module pagination</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.ItemPaginator" id="apidoc.element.pagination.ItemPaginator">
+        function <span class="apidocSignatureSpan">pagination.</span>ItemPaginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ItemPaginator = function (options) {
+		pagination.Paginator.call(this, options);
+		this.set(&#x27;pageLinks&#x27;, 1);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		&#x3c;head&#x3e;
+		&#x3c;script src=&#x22;../release/pagination.full.min.js&#x22;&#x3e;&#x3c;/script&#x3e;
+		&#x3c;/head&#x3e;
+		&#x3c;body&#x3e;
+			&#x3c;div id=&#x22;paging&#x22;&#x3e;&#x3c;/div&#x3e;
+			&#x3c;script type=&#x22;text/javascript&#x22;&#x3e;
+			(function() {
+				var paginator = new pagination.<span class="apidocCodeKeywordSpan">ItemPaginator</span>({prelink:&#x27;/&#x27;, current: 3,
+rowsPerPage: 200, totalResult: 10020});
+				var html = paginator.render();
+				var paginator = pagination.create(&#x27;search&#x27;, {prelink:&#x27;/&#x27;, current: 1, rowsPerPage: 200, totalResult: 10020
+});
+				html += paginator.render();
+				document.getElementById(&#x22;paging&#x22;).innerHTML = html;
+			})();
+			&#x3c;/script&#x3e;
+		&#x3c;/body&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.Paginator" id="apidoc.element.pagination.Paginator">
+        function <span class="apidocSignatureSpan">pagination.</span>Paginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Paginator = function (options) {
+		var keys, i, len;
+		<span class="apidocCodeCommentSpan">/* validate in this.set if needed */
+</span>		this.options = {
+			totalResult : 0,
+			prelink : &#x27;&#x27;,
+			rowsPerPage : 10,
+			pageLinks : 5,
+			current : 1,
+			translator : translator,
+			translationCache : false,
+			translationCacheKey : &#x27;en&#x27;,
+			pageParamName : &#x27;page&#x27;,
+			slashSeparator : false
+		};
+		for( keys = Object.keys(options), i = 0, len = keys.length; i &#x3c; len; i++) {
+			this.set(keys[i], options[keys[i]]);
+		}
+		this._result = null;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.SearchPaginator" id="apidoc.element.pagination.SearchPaginator">
+        function <span class="apidocSignatureSpan">pagination.</span>SearchPaginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SearchPaginator = function (options) {
+		pagination.Paginator.call(this, options);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		}
+	});
+	console.log(boostrapPaginator.render());
+
+### OR
+
+	var pagination = require(&#x27;pagination&#x27;);
+	var paginator = new pagination.<span class="apidocCodeKeywordSpan">SearchPaginator</span>({prelink:&#x27;/&#x27;, current: 10,
+rowsPerPage: 200, totalResult: 10020});
+	console.log(paginator.render());
+	
+	// output (without newlines)
+	&#x3c;div class=&#x22;paginator&#x22;&#x3e;
+		&#x3c;a href=&#x22;/?page=9&#x22; class=&#x22;paginator-previous&#x22;&#x3e;Previous&#x3c;/a&#x3e;
+		&#x3c;a href=&#x22;/?page=8&#x22; class=&#x22;paginator-page paginator-page-first&#x22;&#x3e;8&#x3c;/a&#x3e;
+		&#x3c;a href=&#x22;/?page=9&#x22; class=&#x22;paginator-page&#x22;&#x3e;9&#x3c;/a&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.TemplatePaginator" id="apidoc.element.pagination.TemplatePaginator">
+        function <span class="apidocSignatureSpan">pagination.</span>TemplatePaginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">TemplatePaginator = function (options) {
+		var template = options.template;
+		if (!template) {
+			throw new Error(&#x27;Template compile to function needed&#x27;);
+		}
+		
+		if (!(template.constructor &#x26;&#x26; template.call &#x26;&#x26; template.apply)) {
+			template = pagination.TemplateEngine.compile(String(template), options);
+		}
+		pagination.Paginator.call(this, options);
+		this.renderer = template;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	console.log(paginator.render());
+
+### Or customized renderer
+This example show how to generate markup for twitter boostrap, see example/twitter.html for template rendering
+
+	var pagination = require(&#x27;pagination&#x27;)
+
+	var boostrapPaginator = new pagination.<span class="apidocCodeKeywordSpan">TemplatePaginator</span>({
+		prelink:&#x27;/&#x27;, current: 3, rowsPerPage: 200,
+		totalResult: 10020, slashSeparator: true,
+		template: function(result) {
+			var i, len, prelink;
+			var html = &#x27;&#x3c;div&#x3e;&#x3c;ul class=&#x22;pagination&#x22;&#x3e;&#x27;;
+			if(result.pageCount &#x3c; 2) {
+				html += &#x27;&#x3c;/ul&#x3e;&#x3c;/div&#x3e;&#x27;;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.create" id="apidoc.element.pagination.create">
+        function <span class="apidocSignatureSpan">pagination.</span>create
+        <span class="apidocSignatureSpan">(type, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (type, options) {
+		if (factories.hasOwnProperty(type)) {
+			return new factories[type](options);
+		} else {
+			throw new Error(&#x27;Paginator type&#x27;+type+&#x27; not found in register&#x27;);
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+[![build status](https://secure.travis-ci.org/vanng822/pagination.png)](http://travis-ci.org/vanng822/pagination)
+
+
+## usage example
+
+	var pagination = require(&#x27;pagination&#x27;);
+	var paginator = pagination.<span class="apidocCodeKeywordSpan">create</span>(&#x27;search&#x27;, {prelink:&#x27;/&#x27;, current
+: 1, rowsPerPage: 200, totalResult: 10020});
+	console.log(paginator.render());
+
+### Or customized renderer
+This example show how to generate markup for twitter boostrap, see example/twitter.html for template rendering
+
+	var pagination = require(&#x27;pagination&#x27;)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.registerFactory" id="apidoc.element.pagination.registerFactory">
+        function <span class="apidocSignatureSpan">pagination.</span>registerFactory
+        <span class="apidocSignatureSpan">(type, factory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">registerFactory = function (type, factory) {
+		if (factories.hasOwnProperty(type)) {
+			throw new Error(type + &#x27; already exists&#x27;);
+		}
+		factories[type] = factory;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.last + &#x27;&#x22; class=&#x22;paginator-last&#x22;&#x3e;&#x27; +
+this.options.translator(&#x27;LAST&#x27;) + &#x27;&#x3c;/a&#x3e;&#x27;;
+		} else {
+			html += &#x27;&#x3c;span class=&#x22;paginator-last&#x22;&#x3e;&#x27; + this.options.translator(&#x27;LAST&#x27;) + &#x27;&#x3c
+;/span&#x3e;&#x27;;
+		}
+		html += &#x27;&#x3c;/div&#x3e;&#x27;;
+		return html;
+	};
+	pagination.<span class="apidocCodeKeywordSpan">registerFactory</span>(&#x27;item&#x27;, ItemPaginator);
+};
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.ItemPaginator" id="apidoc.module.pagination.ItemPaginator">module pagination.ItemPaginator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.ItemPaginator.ItemPaginator" id="apidoc.element.pagination.ItemPaginator.ItemPaginator">
+        function <span class="apidocSignatureSpan">pagination.</span>ItemPaginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ItemPaginator = function (options) {
+		pagination.Paginator.call(this, options);
+		this.set(&#x27;pageLinks&#x27;, 1);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		&#x3c;head&#x3e;
+		&#x3c;script src=&#x22;../release/pagination.full.min.js&#x22;&#x3e;&#x3c;/script&#x3e;
+		&#x3c;/head&#x3e;
+		&#x3c;body&#x3e;
+			&#x3c;div id=&#x22;paging&#x22;&#x3e;&#x3c;/div&#x3e;
+			&#x3c;script type=&#x22;text/javascript&#x22;&#x3e;
+			(function() {
+				var paginator = new pagination.<span class="apidocCodeKeywordSpan">ItemPaginator</span>({prelink:&#x27;/&#x27;, current: 3,
+rowsPerPage: 200, totalResult: 10020});
+				var html = paginator.render();
+				var paginator = pagination.create(&#x27;search&#x27;, {prelink:&#x27;/&#x27;, current: 1, rowsPerPage: 200, totalResult: 10020
+});
+				html += paginator.render();
+				document.getElementById(&#x22;paging&#x22;).innerHTML = html;
+			})();
+			&#x3c;/script&#x3e;
+		&#x3c;/body&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.ItemPaginator.super_" id="apidoc.element.pagination.ItemPaginator.super_">
+        function <span class="apidocSignatureSpan">pagination.ItemPaginator.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (options) {
+		var keys, i, len;
+		<span class="apidocCodeCommentSpan">/* validate in this.set if needed */
+</span>		this.options = {
+			totalResult : 0,
+			prelink : &#x27;&#x27;,
+			rowsPerPage : 10,
+			pageLinks : 5,
+			current : 1,
+			translator : translator,
+			translationCache : false,
+			translationCacheKey : &#x27;en&#x27;,
+			pageParamName : &#x27;page&#x27;,
+			slashSeparator : false
+		};
+		for( keys = Object.keys(options), i = 0, len = keys.length; i &#x3c; len; i++) {
+			this.set(keys[i], options[keys[i]]);
+		}
+		this._result = null;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.ItemPaginator.prototype" id="apidoc.module.pagination.ItemPaginator.prototype">module pagination.ItemPaginator.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.ItemPaginator.prototype.render" id="apidoc.element.pagination.ItemPaginator.prototype.render">
+        function <span class="apidocSignatureSpan">pagination.ItemPaginator.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function () {
+		var result = this.getPaginationData();
+		var prelink = this.preparePreLink(result.prelink);
+		var html = &#x27;&#x3c;div class=&#x22;paginator&#x22;&#x3e;&#x27;;
+		html += &#x27;&#x3c;span class=&#x22;paginator-current-report&#x22;&#x3e;&#x27;;
+		html += this.renderCurrentPageReport(result.fromResult, result.toResult, result.totalResult);
+		html += &#x27;&#x3c;/span&#x3e;&#x27;;
+
+		if(result.first) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.first + &#x27;&#x22; class=&#x22;paginator-first&#x22;&#x3e;&#x27; + this.options.translator(&#x27;FIRST&#x27;) + &#x27;&#x3c;/a&#x3e;&#x27;;
+		} else {
+			html += &#x27;&#x3c;span class=&#x22;paginator-first&#x22;&#x3e;&#x27; + this.options.translator(&#x27;FIRST&#x27;) + &#x27;&#x3c;/span&#x3e;&#x27;;
+		}
+
+		if(result.previous) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.previous + &#x27;&#x22; class=&#x22;paginator-previous&#x22;&#x3e;&#x27; + this.options.translator(&#x27;PREVIOUS&#x27;) + &#x27;&#x3c;/
+a&#x3e;&#x27;;
+		} else {
+			html += &#x27;&#x3c;span class=&#x22;paginator-previous&#x22;&#x3e;&#x27; + this.options.translator(&#x27;PREVIOUS&#x27;) + &#x27;&#x3c;/span&#x3e;&#x27;;
+		}
+
+		if(result.next) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.next + &#x27;&#x22; class=&#x22;paginator-next&#x22;&#x3e;&#x27; + this.options.translator(&#x27;NEXT&#x27;) + &#x27;&#x3c;/a&#x3e;&#x27;;
+		} else {
+			html += &#x27;&#x3c;span class=&#x22;paginator-next&#x22;&#x3e;&#x27; + this.options.translator(&#x27;NEXT&#x27;) + &#x27;&#x3c;/span&#x3e;&#x27;;
+		}
+
+		if(result.last) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.last + &#x27;&#x22; class=&#x22;paginator-last&#x22;&#x3e;&#x27; + this.options.translator(&#x27;LAST&#x27;) + &#x27;&#x3c;/a&#x3e;&#x27;;
+		} else {
+			html += &#x27;&#x3c;span class=&#x22;paginator-last&#x22;&#x3e;&#x27; + this.options.translator(&#x27;LAST&#x27;) + &#x27;&#x3c;/span&#x3e;&#x27;;
+		}
+		html += &#x27;&#x3c;/div&#x3e;&#x27;;
+		return html;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+[![build status](https://secure.travis-ci.org/vanng822/pagination.png)](http://travis-ci.org/vanng822/pagination)
+
+
+## usage example
+
+	var pagination = require(&#x27;pagination&#x27;);
+	var paginator = pagination.create(&#x27;search&#x27;, {prelink:&#x27;/&#x27;, current: 1, rowsPerPage: 200, totalResult: 10020});
+	console.log(paginator.<span class="apidocCodeKeywordSpan">render</span>());
+
+### Or customized renderer
+This example show how to generate markup for twitter boostrap, see example/twitter.html for template rendering
+
+	var pagination = require(&#x27;pagination&#x27;)
+
+	var boostrapPaginator = new pagination.TemplatePaginator({
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.ItemPaginator.prototype.renderCurrentPageReport" id="apidoc.element.pagination.ItemPaginator.prototype.renderCurrentPageReport">
+        function <span class="apidocSignatureSpan">pagination.ItemPaginator.prototype.</span>renderCurrentPageReport
+        <span class="apidocSignatureSpan">(fromResult, toResult, totalResult)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">renderCurrentPageReport = function (fromResult, toResult, totalResult) {
+		var template;
+		if(!this.options.translationCache) {
+			return this.options.translator(&#x27;CURRENT_PAGE_REPORT&#x27;).replace(&#x27;{FromResult}&#x27;, fromResult).replace(&#x27;{ToResult}&#x27;, toResult).replace
+(&#x27;{TotalResult}&#x27;, totalResult);
+		}
+		if(!translationCache.CURRENT_PAGE_REPORT.hasOwnProperty(this.options.translationCacheKey)) {
+			template = &#x22;return &#x27;&#x22; + (this.options.translator(&#x27;CURRENT_PAGE_REPORT&#x27;).replace(&#x22;&#x27;&#x22;, &#x22;\&#x27;&#x22;).replace(&#x27;{FromResult}&#x27;, &#x22;&#x27; + fromResult
+ + &#x27;&#x22;).replace(&#x27;{ToResult}&#x27;, &#x22;&#x27; + toResult + &#x27;&#x22;).replace(&#x27;{TotalResult}&#x27;, &#x22;&#x27; + totalResult + &#x27;&#x22;)) + &#x22;&#x27;;&#x22;;
+			translationCache.CURRENT_PAGE_REPORT[this.options.translationCacheKey] = new Function(&#x27;fromResult, toResult, totalResult&#x27;, template
+);
+		}
+		return translationCache.CURRENT_PAGE_REPORT[this.options.translationCacheKey](fromResult, toResult, totalResult);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		return translationCache.CURRENT_PAGE_REPORT[this.options.translationCacheKey](fromResult, toResult, totalResult);
+	};
+	ItemPaginator.prototype.render = function() {
+		var result = this.getPaginationData();
+		var prelink = this.preparePreLink(result.prelink);
+		var html = &#x27;&#x3c;div class=&#x22;paginator&#x22;&#x3e;&#x27;;
+		html += &#x27;&#x3c;span class=&#x22;paginator-current-report&#x22;&#x3e;&#x27;;
+		html += this.<span class="apidocCodeKeywordSpan">renderCurrentPageReport</span>(result.fromResult, result.toResult, result.totalResult
+);
+		html += &#x27;&#x3c;/span&#x3e;&#x27;;
+
+		if(result.first) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.first + &#x27;&#x22; class=&#x22;paginator-first&#x22;&#x3e;&#x27; +
+this.options.translator(&#x27;FIRST&#x27;) + &#x27;&#x3c;/a&#x3e;&#x27;;
+		} else {
+			html += &#x27;&#x3c;span class=&#x22;paginator-first&#x22;&#x3e;&#x27; + this.options.translator(&#x27;FIRST&#x27;) + &#x27;&#
+x3c;/span&#x3e;&#x27;;
+		}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.Paginator" id="apidoc.module.pagination.Paginator">module pagination.Paginator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.Paginator.Paginator" id="apidoc.element.pagination.Paginator.Paginator">
+        function <span class="apidocSignatureSpan">pagination.</span>Paginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Paginator = function (options) {
+		var keys, i, len;
+		<span class="apidocCodeCommentSpan">/* validate in this.set if needed */
+</span>		this.options = {
+			totalResult : 0,
+			prelink : &#x27;&#x27;,
+			rowsPerPage : 10,
+			pageLinks : 5,
+			current : 1,
+			translator : translator,
+			translationCache : false,
+			translationCacheKey : &#x27;en&#x27;,
+			pageParamName : &#x27;page&#x27;,
+			slashSeparator : false
+		};
+		for( keys = Object.keys(options), i = 0, len = keys.length; i &#x3c; len; i++) {
+			this.set(keys[i], options[keys[i]]);
+		}
+		this._result = null;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.Paginator.prototype" id="apidoc.module.pagination.Paginator.prototype">module pagination.Paginator.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.Paginator.prototype.calc" id="apidoc.element.pagination.Paginator.prototype.calc">
+        function <span class="apidocSignatureSpan">pagination.Paginator.prototype.</span>calc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">calc = function () {
+			var totalResult = this.options.totalResult;
+			var pageLinks = this.options.pageLinks;
+			var rowsPerPage = this.options.rowsPerPage;
+			var current = this.options.current;
+			var startPage, endPage, pageCount;
+			var oldPageLinks = (pageLinks % 2 === 0) ? 1 : 0, i, half;
+			var result = {
+				prelink : this.options.prelink,
+				current : current,
+				previous : null,
+				next : null,
+				first : null,
+				last : null,
+				range : [],
+				fromResult : null,
+				toResult : null,
+				totalResult : totalResult,
+				pageCount : null
+			};
+			<span class="apidocCodeCommentSpan">/* zero division; negative */
+</span>			if(rowsPerPage &#x3c;= 0) {
+				return result;
+			}
+			pageCount = Math.ceil(totalResult / rowsPerPage);
+			result.pageCount = pageCount;
+			if(pageCount &#x3c; 2) {
+				result.fromResult = 1;
+				result.toResult = totalResult;
+				return result;
+			}
+
+			if(current &#x3e; pageCount) {
+				current = pageCount;
+				result.current = current;
+			}
+			half = Math.floor(pageLinks / 2);
+			startPage = current - half;
+			endPage = current + half - oldPageLinks;
+
+			if(startPage &#x3c; 1) {
+				startPage = 1;
+				endPage = startPage + pageLinks -1;
+				if(endPage &#x3e; pageCount) {
+					endPage = pageCount;
+				}
+			}
+
+			if(endPage &#x3e; pageCount) {
+				endPage = pageCount;
+				startPage = endPage - pageLinks + 1;
+				if(startPage &#x3c; 1) {
+					startPage = 1;
+				}
+			}
+
+			for( i = startPage; i &#x3c;= endPage; i++) {
+				result.range.push(i);
+			}
+
+			if(current &#x3e; 1) {
+				result.first = 1;
+				result.previous = current - 1;
+			}
+
+			if(current &#x3c; pageCount) {
+				result.last = pageCount;
+				result.next = current + 1;
+			}
+
+			result.fromResult = (current - 1) * rowsPerPage + 1;
+			if(current === pageCount) {
+				result.toResult = totalResult;
+			} else {
+				result.toResult = result.fromResult + rowsPerPage - 1;
+			}
+
+			return result;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	};
+
+	exports.Paginator = Paginator;
+
+	Paginator.prototype = {
+		getPaginationData : function() {
+			if(!this._result) {
+				this._result = this.<span class="apidocCodeKeywordSpan">calc</span>();
+			}
+			return this._result;
+		},
+		calc : function() {
+			var totalResult = this.options.totalResult;
+			var pageLinks = this.options.pageLinks;
+			var rowsPerPage = this.options.rowsPerPage;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.Paginator.prototype.getPaginationData" id="apidoc.element.pagination.Paginator.prototype.getPaginationData">
+        function <span class="apidocSignatureSpan">pagination.Paginator.prototype.</span>getPaginationData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPaginationData = function () {
+			if(!this._result) {
+				this._result = this.calc();
+			}
+			return this._result;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		&#x3c;a href=&#x22;/?page=11&#x22; class=&#x22;paginator-next&#x22;&#x3e;Next&#x3c;/a&#x3e;
+	&#x3c;/div&#x3e;
+
+### OR need data from the calculation
+
+	var pagination = require(&#x27;pagination&#x27;);
+	var paginator = new pagination.SearchPaginator({prelink:&#x27;/&#x27;, current: 3, rowsPerPage: 200, totalResult: 10020});
+	console.log(paginator.<span class="apidocCodeKeywordSpan">getPaginationData</span>());
+	
+	// output
+	{ prelink: &#x27;/&#x27;,
+	  current: 3,
+	  previous: 2,
+	  next: 4,
+	  first: 1,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.Paginator.prototype.preparePreLink" id="apidoc.element.pagination.Paginator.prototype.preparePreLink">
+        function <span class="apidocSignatureSpan">pagination.Paginator.prototype.</span>preparePreLink
+        <span class="apidocSignatureSpan">(prelink)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preparePreLink = function (prelink) {
+			if (this.options.slashSeparator) {
+				if (prelink[prelink.length - 1] !== &#x27;/&#x27;) {
+					prelink += &#x27;/&#x27;;
+				}
+				return prelink + this.options.pageParamName + &#x27;/&#x27;;
+			}
+			if(prelink.indexOf(&#x27;?&#x27;) !== -1) {
+				if(prelink[prelink.length - 1] !== &#x27;?&#x27; &#x26;&#x26; prelink[prelink.length - 1] !== &#x27;&#x26;&#x27;) {
+					prelink += &#x27;&#x26;&#x27;;
+				}
+			} else {
+				prelink += &#x27;?&#x27;;
+			}
+			
+			return prelink + this.options.pageParamName + &#x27;=&#x27;;
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		template: function(result) {
+			var i, len, prelink;
+			var html = &#x27;&#x3c;div&#x3e;&#x3c;ul class=&#x22;pagination&#x22;&#x3e;&#x27;;
+			if(result.pageCount &#x3c; 2) {
+				html += &#x27;&#x3c;/ul&#x3e;&#x3c;/div&#x3e;&#x27;;
+				return html;
+			}
+			prelink = this.<span class="apidocCodeKeywordSpan">preparePreLink</span>(result.prelink);
+			if(result.previous) {
+				html += &#x27;&#x3c;li&#x3e;&#x3c;a href=&#x22;&#x27; + prelink + result.previous + &#x27;&#x22;&#x3e;&#x27; + this.options.
+translator(&#x27;PREVIOUS&#x27;) + &#x27;&#x3c;/a&#x3e;&#x3c;/li&#x3e;&#x27;;
+			}
+			if(result.range.length) {
+				for( i = 0, len = result.range.length; i &#x3c; len; i++) {
+					if(result.range[i] === result.current) {
+						html += &#x27;&#x3c;li class=&#x22;active&#x22;&#x3e;&#x3c;a href=&#x22;&#x27; + prelink + result.range[i] + &#x27;&#x22;&#
+x3e;&#x27; + result.range[i] + &#x27;&#x3c;/a&#x3e;&#x3c;/li&#x3e;&#x27;;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.Paginator.prototype.render" id="apidoc.element.pagination.Paginator.prototype.render">
+        function <span class="apidocSignatureSpan">pagination.Paginator.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function () {
+			throw new Error(&#x27;Implement&#x27;);
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+[![build status](https://secure.travis-ci.org/vanng822/pagination.png)](http://travis-ci.org/vanng822/pagination)
+
+
+## usage example
+
+	var pagination = require(&#x27;pagination&#x27;);
+	var paginator = pagination.create(&#x27;search&#x27;, {prelink:&#x27;/&#x27;, current: 1, rowsPerPage: 200, totalResult: 10020});
+	console.log(paginator.<span class="apidocCodeKeywordSpan">render</span>());
+
+### Or customized renderer
+This example show how to generate markup for twitter boostrap, see example/twitter.html for template rendering
+
+	var pagination = require(&#x27;pagination&#x27;)
+
+	var boostrapPaginator = new pagination.TemplatePaginator({
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.Paginator.prototype.set" id="apidoc.element.pagination.Paginator.prototype.set">
+        function <span class="apidocSignatureSpan">pagination.Paginator.prototype.</span>set
+        <span class="apidocSignatureSpan">(option, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set = function (option, value) {
+			if(this.options.hasOwnProperty(option)) {
+				switch(option) {
+					case &#x27;current&#x27;:
+					case &#x27;totalResult&#x27;:
+					case &#x27;pageLinks&#x27;:
+					case &#x27;rowsPerPage&#x27;:
+						value = parseInt(value, 10);
+						if (isNaN(value)) {
+							throw new Error(&#x27;Invalid value for &#x22;&#x27; + option + &#x27;&#x22;, expected an integer&#x27;);
+						}
+						break;
+					case &#x27;translator&#x27;:
+						if (!(value &#x26;&#x26; value.constructor &#x26;&#x26; value.call &#x26;&#x26; value.apply)) {
+							throw new Error(&#x27;Translator must be a function&#x27;);
+						}
+						break;
+					case &#x27;translationCacheKey&#x27;:
+					case &#x27;pageParamName&#x27;:
+					case &#x27;prelink&#x27;:
+						value = String(value);
+						break;
+				}
+				this.options[option] = value;
+				if (this._result) {
+					this._result = null;
+				}
+			}
+		}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `pageCount` Integer
+* `translations` Object with properties NEXT, PREVIOUS, FIRST, LAST, CURRENT_PAGE_REPORT
+
+## API
+### Paginator.getPaginationData()
+Return an object contains data for rendering markup. See example above.
+
+### Paginator.<span class="apidocCodeKeywordSpan">set</span>(option, value)
+Set value to a single for option. See options section bellow
+
+### Paginator.preparePreLink(prelink)
+* `prelink` String
+
+Append page param to the link
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.SearchPaginator" id="apidoc.module.pagination.SearchPaginator">module pagination.SearchPaginator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.SearchPaginator.SearchPaginator" id="apidoc.element.pagination.SearchPaginator.SearchPaginator">
+        function <span class="apidocSignatureSpan">pagination.</span>SearchPaginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SearchPaginator = function (options) {
+		pagination.Paginator.call(this, options);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		}
+	});
+	console.log(boostrapPaginator.render());
+
+### OR
+
+	var pagination = require(&#x27;pagination&#x27;);
+	var paginator = new pagination.<span class="apidocCodeKeywordSpan">SearchPaginator</span>({prelink:&#x27;/&#x27;, current: 10,
+rowsPerPage: 200, totalResult: 10020});
+	console.log(paginator.render());
+	
+	// output (without newlines)
+	&#x3c;div class=&#x22;paginator&#x22;&#x3e;
+		&#x3c;a href=&#x22;/?page=9&#x22; class=&#x22;paginator-previous&#x22;&#x3e;Previous&#x3c;/a&#x3e;
+		&#x3c;a href=&#x22;/?page=8&#x22; class=&#x22;paginator-page paginator-page-first&#x22;&#x3e;8&#x3c;/a&#x3e;
+		&#x3c;a href=&#x22;/?page=9&#x22; class=&#x22;paginator-page&#x22;&#x3e;9&#x3c;/a&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.SearchPaginator.super_" id="apidoc.element.pagination.SearchPaginator.super_">
+        function <span class="apidocSignatureSpan">pagination.SearchPaginator.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (options) {
+		var keys, i, len;
+		<span class="apidocCodeCommentSpan">/* validate in this.set if needed */
+</span>		this.options = {
+			totalResult : 0,
+			prelink : &#x27;&#x27;,
+			rowsPerPage : 10,
+			pageLinks : 5,
+			current : 1,
+			translator : translator,
+			translationCache : false,
+			translationCacheKey : &#x27;en&#x27;,
+			pageParamName : &#x27;page&#x27;,
+			slashSeparator : false
+		};
+		for( keys = Object.keys(options), i = 0, len = keys.length; i &#x3c; len; i++) {
+			this.set(keys[i], options[keys[i]]);
+		}
+		this._result = null;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.SearchPaginator.prototype" id="apidoc.module.pagination.SearchPaginator.prototype">module pagination.SearchPaginator.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.SearchPaginator.prototype.render" id="apidoc.element.pagination.SearchPaginator.prototype.render">
+        function <span class="apidocSignatureSpan">pagination.SearchPaginator.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function () {
+		var i, len, className, prelink;
+		var result = this.getPaginationData();
+		var html = &#x27;&#x3c;div class=&#x22;paginator&#x22;&#x3e;&#x27;;
+
+		if(result.pageCount &#x3c; 2) {
+			html += &#x27;&#x3c;/div&#x3e;&#x27;;
+			return html;
+		}
+		
+		prelink = this.preparePreLink(result.prelink);
+		
+		if(result.previous) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.previous + &#x27;&#x22; class=&#x22;paginator-previous&#x22;&#x3e;&#x27; + this.options.translator(&#x27;PREVIOUS&#x27;) + &#x27;&#x3c;/
+a&#x3e;&#x27;;
+		}
+
+		if(result.range.length) {
+			for( i = 0, len = result.range.length; i &#x3c; len; i++) {
+				className = &#x27;paginator-page&#x27;;
+
+				if(result.range[i] === result.current) {
+					className = &#x27;paginator-current&#x27;;
+				}
+				if(i === 0) {
+					className += &#x27; paginator-page-first&#x27;;
+				} else if(i === len - 1) {
+					className += &#x27; paginator-page-last&#x27;;
+				}
+				html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.range[i] + &#x27;&#x22; class=&#x22;&#x27; + className + &#x27;&#x22;&#x3e;&#x27; + result.range[i] + &#x27;&#x3c;/a&#x3e;&#x27;;
+			}
+		}
+		if(result.next) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.next + &#x27;&#x22; class=&#x22;paginator-next&#x22;&#x3e;&#x27; + this.options.translator(&#x27;NEXT&#x27;) + &#x27;&#x3c;/a&#x3e;&#x27;;
+		}
+		html += &#x27;&#x3c;/div&#x3e;&#x27;;
+		return html;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+[![build status](https://secure.travis-ci.org/vanng822/pagination.png)](http://travis-ci.org/vanng822/pagination)
+
+
+## usage example
+
+	var pagination = require(&#x27;pagination&#x27;);
+	var paginator = pagination.create(&#x27;search&#x27;, {prelink:&#x27;/&#x27;, current: 1, rowsPerPage: 200, totalResult: 10020});
+	console.log(paginator.<span class="apidocCodeKeywordSpan">render</span>());
+
+### Or customized renderer
+This example show how to generate markup for twitter boostrap, see example/twitter.html for template rendering
+
+	var pagination = require(&#x27;pagination&#x27;)
+
+	var boostrapPaginator = new pagination.TemplatePaginator({
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.TemplateEngine" id="apidoc.module.pagination.TemplateEngine">module pagination.TemplateEngine</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.TemplateEngine.compile" id="apidoc.element.pagination.TemplateEngine.compile">
+        function <span class="apidocSignatureSpan">pagination.TemplateEngine.</span>compile
+        <span class="apidocSignatureSpan">(str, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (str, options){
+		var fn, options = options || {};
+		if (options.cache) {
+			if (options.id) {
+				fn = cache[options.id] || (cache[options.id] = _compile(str, options));
+			} else {
+				throw new Error(&#x27;&#x22;cache&#x22; option requires &#x22;id&#x22;&#x27;);
+			}
+		} else {
+			fn = _compile(str, options);
+		}
+		return fn;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `options` Object see Options section bellow
+
+Wrapper for create instance of classes above
+
+### pagination.TemplateEngine.parse(str, options)
+See pagination.TemplateEngine.compile bellow
+
+### pagination.TemplateEngine.<span class="apidocCodeKeywordSpan">compile</span>(str, options)
+* `str` Template string
+* `options` object which can contains .open .close .cache and .id
+
+## Options
+Object to pass to paginator classes (second argument when using create function)
+
+### totalResult: {Integer}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.TemplateEngine.parse" id="apidoc.element.pagination.TemplateEngine.parse">
+        function <span class="apidocSignatureSpan">pagination.TemplateEngine.</span>parse
+        <span class="apidocSignatureSpan">(str, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (str, options) {
+		var options = options || {}
+		,open = options.open || &#x27;&#x3c;%&#x27;
+		,close = options.close || &#x27;%&#x3e;&#x27;;
+		var prefix, postfix, i, end, len, js, start, n;
+		var buf = [&#x22;var buf = [];&#x22;,
+		           &#x22;\nwith (paginationData) {&#x22;,
+		           &#x22;\n  buf.push(&#x27;&#x22;];
+		for (i = 0, len = str.length; i &#x3c; len; ++i) {
+			if (str.slice(i, open.length + i) === open) {
+				i += open.length;
+				switch (str.substr(i, 1)) {
+					case &#x27;=&#x27;:
+						prefix = &#x22;&#x27;, escape(&#x22;;
+						postfix = &#x22;), &#x27;&#x22;;
+						++i;
+						break;
+					case &#x27;-&#x27;:
+						prefix = &#x22;&#x27;, (&#x22; ;
+						postfix = &#x22;), &#x27;&#x22;;
+						++i;
+						break;
+					default:
+						prefix = &#x22;&#x27;);&#x22;;
+						postfix = &#x22;; buf.push(&#x27;&#x22;;
+				}
+				end = str.indexOf(close, i);
+				js = str.substring(i, end);
+				start = i; n = 0;
+				while (~(n = js.indexOf(&#x22;\n&#x22;, n))) n++;
+				buf.push(prefix, js, postfix);
+				i += end - start + close.length - 1;
+			} else if (str.substr(i, 1) === &#x22;\\&#x22;) {
+				buf.push(&#x22;\\\\&#x22;);
+			} else if (str.substr(i, 1) === &#x22;&#x27;&#x22;) {
+				buf.push(&#x22;\\&#x27;&#x22;);
+			} else if (str.substr(i, 1) === &#x22;\r&#x22;) {
+				buf.push(&#x22; &#x22;);
+			} else if (str.substr(i, 1) === &#x22;\n&#x22;) {
+				buf.push(&#x22;\\n&#x22;);
+			} else {
+				buf.push(str.substr(i, 1));
+			}
+		}
+		buf.push(&#x22;&#x27;);\n}\nreturn buf.join(&#x27;&#x27;);&#x22;);
+		return buf.join(&#x27;&#x27;);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### pagination.create(type, options)
+* `type` String
+* `options` Object see Options section bellow
+
+Wrapper for create instance of classes above
+
+### pagination.TemplateEngine.<span class="apidocCodeKeywordSpan">parse</span>(str, options)
+See pagination.TemplateEngine.compile bellow
+
+### pagination.TemplateEngine.compile(str, options)
+* `str` Template string
+* `options` object which can contains .open .close .cache and .id
+
+## Options
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.TemplatePaginator" id="apidoc.module.pagination.TemplatePaginator">module pagination.TemplatePaginator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.TemplatePaginator.TemplatePaginator" id="apidoc.element.pagination.TemplatePaginator.TemplatePaginator">
+        function <span class="apidocSignatureSpan">pagination.</span>TemplatePaginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">TemplatePaginator = function (options) {
+		var template = options.template;
+		if (!template) {
+			throw new Error(&#x27;Template compile to function needed&#x27;);
+		}
+		
+		if (!(template.constructor &#x26;&#x26; template.call &#x26;&#x26; template.apply)) {
+			template = pagination.TemplateEngine.compile(String(template), options);
+		}
+		pagination.Paginator.call(this, options);
+		this.renderer = template;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	console.log(paginator.render());
+
+### Or customized renderer
+This example show how to generate markup for twitter boostrap, see example/twitter.html for template rendering
+
+	var pagination = require(&#x27;pagination&#x27;)
+
+	var boostrapPaginator = new pagination.<span class="apidocCodeKeywordSpan">TemplatePaginator</span>({
+		prelink:&#x27;/&#x27;, current: 3, rowsPerPage: 200,
+		totalResult: 10020, slashSeparator: true,
+		template: function(result) {
+			var i, len, prelink;
+			var html = &#x27;&#x3c;div&#x3e;&#x3c;ul class=&#x22;pagination&#x22;&#x3e;&#x27;;
+			if(result.pageCount &#x3c; 2) {
+				html += &#x27;&#x3c;/ul&#x3e;&#x3c;/div&#x3e;&#x27;;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.TemplatePaginator.super_" id="apidoc.element.pagination.TemplatePaginator.super_">
+        function <span class="apidocSignatureSpan">pagination.TemplatePaginator.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (options) {
+		var keys, i, len;
+		<span class="apidocCodeCommentSpan">/* validate in this.set if needed */
+</span>		this.options = {
+			totalResult : 0,
+			prelink : &#x27;&#x27;,
+			rowsPerPage : 10,
+			pageLinks : 5,
+			current : 1,
+			translator : translator,
+			translationCache : false,
+			translationCacheKey : &#x27;en&#x27;,
+			pageParamName : &#x27;page&#x27;,
+			slashSeparator : false
+		};
+		for( keys = Object.keys(options), i = 0, len = keys.length; i &#x3c; len; i++) {
+			this.set(keys[i], options[keys[i]]);
+		}
+		this._result = null;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.TemplatePaginator.prototype" id="apidoc.module.pagination.TemplatePaginator.prototype">module pagination.TemplatePaginator.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.TemplatePaginator.prototype.render" id="apidoc.element.pagination.TemplatePaginator.prototype.render">
+        function <span class="apidocSignatureSpan">pagination.TemplatePaginator.prototype.</span>render
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function () {
+		var i, len, data = this.getPaginationData();
+		data.preparedPreLink = this.preparePreLink(data.prelink);
+		data.translations = {};
+		for (i = 0, len = pagination.translationKeys.length; i &#x3c; len; i++) {
+			data.translations[pagination.translationKeys[i]] = this.options.translator(pagination.translationKeys[i]);
+		}
+		return this.renderer(data);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+[![build status](https://secure.travis-ci.org/vanng822/pagination.png)](http://travis-ci.org/vanng822/pagination)
+
+
+## usage example
+
+	var pagination = require(&#x27;pagination&#x27;);
+	var paginator = pagination.create(&#x27;search&#x27;, {prelink:&#x27;/&#x27;, current: 1, rowsPerPage: 200, totalResult: 10020});
+	console.log(paginator.<span class="apidocCodeKeywordSpan">render</span>());
+
+### Or customized renderer
+This example show how to generate markup for twitter boostrap, see example/twitter.html for template rendering
+
+	var pagination = require(&#x27;pagination&#x27;)
+
+	var boostrapPaginator = new pagination.TemplatePaginator({
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.index" id="apidoc.module.pagination.index">module pagination.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.index.ItemPaginator" id="apidoc.element.pagination.index.ItemPaginator">
+        function <span class="apidocSignatureSpan">pagination.index.</span>ItemPaginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ItemPaginator = function (options) {
+		pagination.Paginator.call(this, options);
+		this.set(&#x27;pageLinks&#x27;, 1);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		&#x3c;head&#x3e;
+		&#x3c;script src=&#x22;../release/pagination.full.min.js&#x22;&#x3e;&#x3c;/script&#x3e;
+		&#x3c;/head&#x3e;
+		&#x3c;body&#x3e;
+			&#x3c;div id=&#x22;paging&#x22;&#x3e;&#x3c;/div&#x3e;
+			&#x3c;script type=&#x22;text/javascript&#x22;&#x3e;
+			(function() {
+				var paginator = new pagination.<span class="apidocCodeKeywordSpan">ItemPaginator</span>({prelink:&#x27;/&#x27;, current: 3,
+rowsPerPage: 200, totalResult: 10020});
+				var html = paginator.render();
+				var paginator = pagination.create(&#x27;search&#x27;, {prelink:&#x27;/&#x27;, current: 1, rowsPerPage: 200, totalResult: 10020
+});
+				html += paginator.render();
+				document.getElementById(&#x22;paging&#x22;).innerHTML = html;
+			})();
+			&#x3c;/script&#x3e;
+		&#x3c;/body&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.index.Paginator" id="apidoc.element.pagination.index.Paginator">
+        function <span class="apidocSignatureSpan">pagination.index.</span>Paginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Paginator = function (options) {
+		var keys, i, len;
+		<span class="apidocCodeCommentSpan">/* validate in this.set if needed */
+</span>		this.options = {
+			totalResult : 0,
+			prelink : &#x27;&#x27;,
+			rowsPerPage : 10,
+			pageLinks : 5,
+			current : 1,
+			translator : translator,
+			translationCache : false,
+			translationCacheKey : &#x27;en&#x27;,
+			pageParamName : &#x27;page&#x27;,
+			slashSeparator : false
+		};
+		for( keys = Object.keys(options), i = 0, len = keys.length; i &#x3c; len; i++) {
+			this.set(keys[i], options[keys[i]]);
+		}
+		this._result = null;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.index.SearchPaginator" id="apidoc.element.pagination.index.SearchPaginator">
+        function <span class="apidocSignatureSpan">pagination.index.</span>SearchPaginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SearchPaginator = function (options) {
+		pagination.Paginator.call(this, options);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		}
+	});
+	console.log(boostrapPaginator.render());
+
+### OR
+
+	var pagination = require(&#x27;pagination&#x27;);
+	var paginator = new pagination.<span class="apidocCodeKeywordSpan">SearchPaginator</span>({prelink:&#x27;/&#x27;, current: 10,
+rowsPerPage: 200, totalResult: 10020});
+	console.log(paginator.render());
+	
+	// output (without newlines)
+	&#x3c;div class=&#x22;paginator&#x22;&#x3e;
+		&#x3c;a href=&#x22;/?page=9&#x22; class=&#x22;paginator-previous&#x22;&#x3e;Previous&#x3c;/a&#x3e;
+		&#x3c;a href=&#x22;/?page=8&#x22; class=&#x22;paginator-page paginator-page-first&#x22;&#x3e;8&#x3c;/a&#x3e;
+		&#x3c;a href=&#x22;/?page=9&#x22; class=&#x22;paginator-page&#x22;&#x3e;9&#x3c;/a&#x3e;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.index.TemplatePaginator" id="apidoc.element.pagination.index.TemplatePaginator">
+        function <span class="apidocSignatureSpan">pagination.index.</span>TemplatePaginator
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">TemplatePaginator = function (options) {
+		var template = options.template;
+		if (!template) {
+			throw new Error(&#x27;Template compile to function needed&#x27;);
+		}
+		
+		if (!(template.constructor &#x26;&#x26; template.call &#x26;&#x26; template.apply)) {
+			template = pagination.TemplateEngine.compile(String(template), options);
+		}
+		pagination.Paginator.call(this, options);
+		this.renderer = template;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	console.log(paginator.render());
+
+### Or customized renderer
+This example show how to generate markup for twitter boostrap, see example/twitter.html for template rendering
+
+	var pagination = require(&#x27;pagination&#x27;)
+
+	var boostrapPaginator = new pagination.<span class="apidocCodeKeywordSpan">TemplatePaginator</span>({
+		prelink:&#x27;/&#x27;, current: 3, rowsPerPage: 200,
+		totalResult: 10020, slashSeparator: true,
+		template: function(result) {
+			var i, len, prelink;
+			var html = &#x27;&#x3c;div&#x3e;&#x3c;ul class=&#x22;pagination&#x22;&#x3e;&#x27;;
+			if(result.pageCount &#x3c; 2) {
+				html += &#x27;&#x3c;/ul&#x3e;&#x3c;/div&#x3e;&#x27;;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.index.create" id="apidoc.element.pagination.index.create">
+        function <span class="apidocSignatureSpan">pagination.index.</span>create
+        <span class="apidocSignatureSpan">(type, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (type, options) {
+		if (factories.hasOwnProperty(type)) {
+			return new factories[type](options);
+		} else {
+			throw new Error(&#x27;Paginator type&#x27;+type+&#x27; not found in register&#x27;);
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+[![build status](https://secure.travis-ci.org/vanng822/pagination.png)](http://travis-ci.org/vanng822/pagination)
+
+
+## usage example
+
+	var pagination = require(&#x27;pagination&#x27;);
+	var paginator = pagination.<span class="apidocCodeKeywordSpan">create</span>(&#x27;search&#x27;, {prelink:&#x27;/&#x27;, current
+: 1, rowsPerPage: 200, totalResult: 10020});
+	console.log(paginator.render());
+
+### Or customized renderer
+This example show how to generate markup for twitter boostrap, see example/twitter.html for template rendering
+
+	var pagination = require(&#x27;pagination&#x27;)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.index.registerFactory" id="apidoc.element.pagination.index.registerFactory">
+        function <span class="apidocSignatureSpan">pagination.index.</span>registerFactory
+        <span class="apidocSignatureSpan">(type, factory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">registerFactory = function (type, factory) {
+		if (factories.hasOwnProperty(type)) {
+			throw new Error(type + &#x27; already exists&#x27;);
+		}
+		factories[type] = factory;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.last + &#x27;&#x22; class=&#x22;paginator-last&#x22;&#x3e;&#x27; +
+this.options.translator(&#x27;LAST&#x27;) + &#x27;&#x3c;/a&#x3e;&#x27;;
+		} else {
+			html += &#x27;&#x3c;span class=&#x22;paginator-last&#x22;&#x3e;&#x27; + this.options.translator(&#x27;LAST&#x27;) + &#x27;&#x3c
+;/span&#x3e;&#x27;;
+		}
+		html += &#x27;&#x3c;/div&#x3e;&#x27;;
+		return html;
+	};
+	pagination.<span class="apidocCodeKeywordSpan">registerFactory</span>(&#x27;item&#x27;, ItemPaginator);
+};
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.item_paginator" id="apidoc.module.pagination.item_paginator">module pagination.item_paginator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.item_paginator.module" id="apidoc.element.pagination.item_paginator.module">
+        function <span class="apidocSignatureSpan">pagination.item_paginator.</span>module
+        <span class="apidocSignatureSpan">(pagination, util)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">module = function (pagination, util) {
+	&#x22;use strict&#x22;;
+	var translationCache = {
+		CURRENT_PAGE_REPORT : {}
+	};
+	var ItemPaginator = pagination.ItemPaginator = function(options) {
+		pagination.Paginator.call(this, options);
+		this.set(&#x27;pageLinks&#x27;, 1);
+	};
+	util.inherits(ItemPaginator, pagination.Paginator);
+	ItemPaginator.prototype.renderCurrentPageReport = function(fromResult, toResult, totalResult) {
+		var template;
+		if(!this.options.translationCache) {
+			return this.options.translator(&#x27;CURRENT_PAGE_REPORT&#x27;).replace(&#x27;{FromResult}&#x27;, fromResult).replace(&#x27;{ToResult}&#x27;, toResult).replace
+(&#x27;{TotalResult}&#x27;, totalResult);
+		}
+		if(!translationCache.CURRENT_PAGE_REPORT.hasOwnProperty(this.options.translationCacheKey)) {
+			template = &#x22;return &#x27;&#x22; + (this.options.translator(&#x27;CURRENT_PAGE_REPORT&#x27;).replace(&#x22;&#x27;&#x22;, &#x22;\&#x27;&#x22;).replace(&#x27;{FromResult}&#x27;, &#x22;&#x27; + fromResult
+ + &#x27;&#x22;).replace(&#x27;{ToResult}&#x27;, &#x22;&#x27; + toResult + &#x27;&#x22;).replace(&#x27;{TotalResult}&#x27;, &#x22;&#x27; + totalResult + &#x27;&#x22;)) + &#x22;&#x27;;&#x22;;
+			translationCache.CURRENT_PAGE_REPORT[this.options.translationCacheKey] = new Function(&#x27;fromResult, toResult, totalResult&#x27;, template
+);
+		}
+		return translationCache.CURRENT_PAGE_REPORT[this.options.translationCacheKey](fromResult, toResult, totalResult);
+	};
+	ItemPaginator.prototype.render = function() {
+		var result = this.getPaginationData();
+		var prelink = this.preparePreLink(result.prelink);
+		var html = &#x27;&#x3c;div class=&#x22;paginator&#x22;&#x3e;&#x27;;
+		html += &#x27;&#x3c;span class=&#x22;paginator-current-report&#x22;&#x3e;&#x27;;
+		html += this.renderCurrentPageReport(result.fromResult, result.toResult, result.totalResult);
+		html += &#x27;&#x3c;/span&#x3e;&#x27;;
+
+		if(result.first) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.first + &#x27;&#x22; class=&#x22;paginator-first&#x22;&#x3e;&#x27; + this.options.translator(&#x27;FIRST&#x27;) + &#x27;&#x3c;/a&#x3e;&#x27;;
+		} else {
+			html += &#x27;&#x3c;span class=&#x22;paginator-first&#x22;&#x3e;&#x27; + this.options.translator(&#x27;FIRST&#x27;) + &#x27;&#x3c;/span&#x3e;&#x27;;
+		}
+
+		if(result.previous) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.previous + &#x27;&#x22; class=&#x22;paginator-previous&#x22;&#x3e;&#x27; + this.options.translator(&#x27;PREVIOUS&#x27;) + &#x27;&#x3c;/
+a&#x3e;&#x27;;
+		} else {
+			html += &#x27;&#x3c;span class=&#x22;paginator-previous&#x22;&#x3e;&#x27; + this.options.translator(&#x27;PREVIOUS&#x27;) + &#x27;&#x3c;/span&#x3e;&#x27;;
+		}
+
+		if(result.next) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.next + &#x27;&#x22; class=&#x22;paginator-next&#x22;&#x3e;&#x27; + this.options.translator(&#x27;NEXT&#x27;) + &#x27;&#x3c;/a&#x3e;&#x27;;
+		} else {
+			html += &#x27;&#x3c;span class=&#x22;paginator-next&#x22;&#x3e;&#x27; + this.options.translator(&#x27;NEXT&#x27;) + &#x27;&#x3c;/span&#x3e;&#x27;;
+		}
+
+		if(result.last) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.last + &#x27;&#x22; class=&#x22;paginator-last&#x22;&#x3e;&#x27; + this.options.translator(&#x27;LAST&#x27;) + &#x27;&#x3c;/a&#x3e;&#x27;;
+		} else {
+			html += &#x27;&#x3c;span class=&#x22;paginator-last&#x22;&#x3e;&#x27; + this.options.translator(&#x27;LAST&#x27;) + &#x27;&#x3c;/span&#x3e;&#x27;;
+		}
+		html += &#x27;&#x3c;/div&#x3e;&#x27;;
+		return html;
+	};
+	pagination.registerFactory(&#x27;item&#x27;, ItemPaginator);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+var util = require(&#x27;util&#x27;);
+var pagination = require(&#x27;./lib/pagination&#x27;);
+require(&#x27;./lib/item_paginator&#x27;).<span class="apidocCodeKeywordSpan">module</span>(pagination, util);
+require(&#x27;./lib/search_paginator&#x27;).module(pagination, util);
+require(&#x27;./lib/template_paginator&#x27;).module(pagination, util);
+require(&#x27;./lib/template&#x27;).module(pagination, util);
+
+module.exports = pagination;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.search_paginator" id="apidoc.module.pagination.search_paginator">module pagination.search_paginator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.search_paginator.module" id="apidoc.element.pagination.search_paginator.module">
+        function <span class="apidocSignatureSpan">pagination.search_paginator.</span>module
+        <span class="apidocSignatureSpan">(pagination, util)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">module = function (pagination, util) {
+	&#x22;use strict&#x22;;
+	var SearchPaginator = function(options) {
+		pagination.Paginator.call(this, options);
+	};
+
+	pagination.SearchPaginator = SearchPaginator;
+
+	util.inherits(SearchPaginator, pagination.Paginator);
+
+	SearchPaginator.prototype.render = function() {
+		var i, len, className, prelink;
+		var result = this.getPaginationData();
+		var html = &#x27;&#x3c;div class=&#x22;paginator&#x22;&#x3e;&#x27;;
+
+		if(result.pageCount &#x3c; 2) {
+			html += &#x27;&#x3c;/div&#x3e;&#x27;;
+			return html;
+		}
+		
+		prelink = this.preparePreLink(result.prelink);
+		
+		if(result.previous) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.previous + &#x27;&#x22; class=&#x22;paginator-previous&#x22;&#x3e;&#x27; + this.options.translator(&#x27;PREVIOUS&#x27;) + &#x27;&#x3c;/
+a&#x3e;&#x27;;
+		}
+
+		if(result.range.length) {
+			for( i = 0, len = result.range.length; i &#x3c; len; i++) {
+				className = &#x27;paginator-page&#x27;;
+
+				if(result.range[i] === result.current) {
+					className = &#x27;paginator-current&#x27;;
+				}
+				if(i === 0) {
+					className += &#x27; paginator-page-first&#x27;;
+				} else if(i === len - 1) {
+					className += &#x27; paginator-page-last&#x27;;
+				}
+				html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.range[i] + &#x27;&#x22; class=&#x22;&#x27; + className + &#x27;&#x22;&#x3e;&#x27; + result.range[i] + &#x27;&#x3c;/a&#x3e;&#x27;;
+			}
+		}
+		if(result.next) {
+			html += &#x27;&#x3c;a href=&#x22;&#x27; + prelink + result.next + &#x27;&#x22; class=&#x22;paginator-next&#x22;&#x3e;&#x27; + this.options.translator(&#x27;NEXT&#x27;) + &#x27;&#x3c;/a&#x3e;&#x27;;
+		}
+		html += &#x27;&#x3c;/div&#x3e;&#x27;;
+		return html;
+	};
+	pagination.registerFactory(&#x27;search&#x27;, SearchPaginator);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+var util = require(&#x27;util&#x27;);
+var pagination = require(&#x27;./lib/pagination&#x27;);
+require(&#x27;./lib/item_paginator&#x27;).<span class="apidocCodeKeywordSpan">module</span>(pagination, util);
+require(&#x27;./lib/search_paginator&#x27;).module(pagination, util);
+require(&#x27;./lib/template_paginator&#x27;).module(pagination, util);
+require(&#x27;./lib/template&#x27;).module(pagination, util);
+
+module.exports = pagination;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.template" id="apidoc.module.pagination.template">module pagination.template</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.template.module" id="apidoc.element.pagination.template.module">
+        function <span class="apidocSignatureSpan">pagination.template.</span>module
+        <span class="apidocSignatureSpan">(pagination, util)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">module = function (pagination, util) {
+	&#x22;use strict&#x22;;
+	var cache = {};
+	var parse = function(str, options) {
+		var options = options || {}
+		,open = options.open || &#x27;&#x3c;%&#x27;
+		,close = options.close || &#x27;%&#x3e;&#x27;;
+		var prefix, postfix, i, end, len, js, start, n;
+		var buf = [&#x22;var buf = [];&#x22;,
+		           &#x22;\nwith (paginationData) {&#x22;,
+		           &#x22;\n  buf.push(&#x27;&#x22;];
+		for (i = 0, len = str.length; i &#x3c; len; ++i) {
+			if (str.slice(i, open.length + i) === open) {
+				i += open.length;
+				switch (str.substr(i, 1)) {
+					case &#x27;=&#x27;:
+						prefix = &#x22;&#x27;, escape(&#x22;;
+						postfix = &#x22;), &#x27;&#x22;;
+						++i;
+						break;
+					case &#x27;-&#x27;:
+						prefix = &#x22;&#x27;, (&#x22; ;
+						postfix = &#x22;), &#x27;&#x22;;
+						++i;
+						break;
+					default:
+						prefix = &#x22;&#x27;);&#x22;;
+						postfix = &#x22;; buf.push(&#x27;&#x22;;
+				}
+				end = str.indexOf(close, i);
+				js = str.substring(i, end);
+				start = i; n = 0;
+				while (~(n = js.indexOf(&#x22;\n&#x22;, n))) n++;
+				buf.push(prefix, js, postfix);
+				i += end - start + close.length - 1;
+			} else if (str.substr(i, 1) === &#x22;\\&#x22;) {
+				buf.push(&#x22;\\\\&#x22;);
+			} else if (str.substr(i, 1) === &#x22;&#x27;&#x22;) {
+				buf.push(&#x22;\\&#x27;&#x22;);
+			} else if (str.substr(i, 1) === &#x22;\r&#x22;) {
+				buf.push(&#x22; &#x22;);
+			} else if (str.substr(i, 1) === &#x22;\n&#x22;) {
+				buf.push(&#x22;\\n&#x22;);
+			} else {
+				buf.push(str.substr(i, 1));
+			}
+		}
+		buf.push(&#x22;&#x27;);\n}\nreturn buf.join(&#x27;&#x27;);&#x22;);
+		return buf.join(&#x27;&#x27;);
+	};
+	var _escape = function(text) {
+		return String(text)
+				.replace(/&#x26;/g, &#x27;&#x26;amp;&#x27;)
+				.replace(/&#x3c;/g, &#x27;&#x26;lt;&#x27;)
+				.replace(/&#x3e;/g, &#x27;&#x26;gt;&#x27;)
+				.replace(/&#x22;/g, &#x27;&#x26;quot;&#x27;)
+				.replace(/&#x27;/g, &#x27;&#x26;#39;&#x27;);
+	};
+	var _compile = function(str, options) {
+		var fn = new Function(&#x27;paginationData, escape&#x27;, parse(str, options));
+		return function(paginationData){
+			return fn.call(this, paginationData, _escape);
+		};
+	};
+	
+	var compile = function(str, options){
+		var fn, options = options || {};
+		if (options.cache) {
+			if (options.id) {
+				fn = cache[options.id] || (cache[options.id] = _compile(str, options));
+			} else {
+				throw new Error(&#x27;&#x22;cache&#x22; option requires &#x22;id&#x22;&#x27;);
+			}
+		} else {
+			fn = _compile(str, options);
+		}
+		return fn;
+	};
+	
+	pagination.TemplateEngine = {
+		parse : parse,
+		compile : compile
+	};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+var util = require(&#x27;util&#x27;);
+var pagination = require(&#x27;./lib/pagination&#x27;);
+require(&#x27;./lib/item_paginator&#x27;).<span class="apidocCodeKeywordSpan">module</span>(pagination, util);
+require(&#x27;./lib/search_paginator&#x27;).module(pagination, util);
+require(&#x27;./lib/template_paginator&#x27;).module(pagination, util);
+require(&#x27;./lib/template&#x27;).module(pagination, util);
+
+module.exports = pagination;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pagination.template_paginator" id="apidoc.module.pagination.template_paginator">module pagination.template_paginator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pagination.template_paginator.module" id="apidoc.element.pagination.template_paginator.module">
+        function <span class="apidocSignatureSpan">pagination.template_paginator.</span>module
+        <span class="apidocSignatureSpan">(pagination, util)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">module = function (pagination, util) {
+	&#x22;use strict&#x22;;
+	
+	var TemplatePaginator = pagination.TemplatePaginator = function(options) {
+		var template = options.template;
+		if (!template) {
+			throw new Error(&#x27;Template compile to function needed&#x27;);
+		}
+		
+		if (!(template.constructor &#x26;&#x26; template.call &#x26;&#x26; template.apply)) {
+			template = pagination.TemplateEngine.compile(String(template), options);
+		}
+		pagination.Paginator.call(this, options);
+		this.renderer = template;
+	};
+	util.inherits(TemplatePaginator, pagination.Paginator);
+	TemplatePaginator.prototype.render = function() {
+		var i, len, data = this.getPaginationData();
+		data.preparedPreLink = this.preparePreLink(data.prelink);
+		data.translations = {};
+		for (i = 0, len = pagination.translationKeys.length; i &#x3c; len; i++) {
+			data.translations[pagination.translationKeys[i]] = this.options.translator(pagination.translationKeys[i]);
+		}
+		return this.renderer(data);
+	};
+	pagination.registerFactory(&#x27;template&#x27;, TemplatePaginator);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+var util = require(&#x27;util&#x27;);
+var pagination = require(&#x27;./lib/pagination&#x27;);
+require(&#x27;./lib/item_paginator&#x27;).<span class="apidocCodeKeywordSpan">module</span>(pagination, util);
+require(&#x27;./lib/search_paginator&#x27;).module(pagination, util);
+require(&#x27;./lib/template_paginator&#x27;).module(pagination, util);
+require(&#x27;./lib/template&#x27;).module(pagination, util);
+
+module.exports = pagination;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
